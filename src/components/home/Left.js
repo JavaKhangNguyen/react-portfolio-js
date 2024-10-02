@@ -19,7 +19,7 @@ const Left = ({ handleContactClick }) => {
         <img
           className="w-full h-full object-contain md:object-scale-down rounded-2xl"
           src={bannerImg}
-          loading="priority"
+          loading="lazy"
           alt="bannerImage"
         />
       </div>
