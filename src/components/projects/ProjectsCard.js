@@ -14,6 +14,7 @@ const ProjectsCard = ({ image, title, category, link }) => {
       <a 
         href={link}
         target="_blank"
+        rel="noreferrer"
         className="font-titleFont text-lg font-semibold text-[#ccc] hover:text-designColor">
         {title}
       </a>
