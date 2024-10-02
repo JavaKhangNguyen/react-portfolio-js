@@ -66,7 +66,7 @@ const Left = ({ handleContactClick }) => {
             className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase  gap-2 hover:text-designColor duration-300"
             rel="noreferrer"
           >
-            <button className="w-full h-full flex justify-center items-center gap-2">
+          <button className="w-full h-full flex justify-center items-center gap-2">
               <span className="text-lg">Download CV</span>
               <FontAwesomeIcon icon={faFileArrowDown} bounce />
             </button>

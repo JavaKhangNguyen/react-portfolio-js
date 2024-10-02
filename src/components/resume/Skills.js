@@ -1,9 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faToolbox, faCheck, faBookBookmark} from "@fortawesome/free-solid-svg-icons";
+import {faToolbox, faCheck, faCircleInfo} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faNode} from "@fortawesome/free-brands-svg-icons";
 import {
-  GitOriginal,
   MaterialuiOriginal,
   MysqlOriginalWordmark,
   NginxOriginal,
@@ -13,6 +12,7 @@ import {
   FastapiOriginal,
   TailwindcssOriginal,
   VercelOriginalWordmark,
+  VuejsOriginal,
 } from "devicons-react";
 
 import ResumeTitle from "./ResumeTitle";
@@ -23,10 +23,19 @@ const Skills = () => {
       icon: <ReactOriginal size="60" />,
     },
     {
+      icon: <VuejsOriginal size="60" />,
+    },
+    {
       icon: <TailwindcssOriginal size="60" />,
     },
     {
       icon: <MaterialuiOriginal size="60" />,
+    },
+    {
+      icon: <NginxOriginal size="60" />,
+    },
+    {
+      icon: <FastapiOriginal size="60" />,
     },
     {
       icon: (
@@ -37,22 +46,10 @@ const Skills = () => {
       ),
     },
     {
-      icon: <NginxOriginal size="60" />,
-    },
-    {
-      icon: <FastapiOriginal size="60" />,
-    },
-    {
       icon: <FlaskOriginalWordmark size="60" style={{ fill: "white" }} />,
     }, 
     {
       icon: <MysqlOriginalWordmark size="60" />,
-    },
-    {
-      icon: <VercelOriginalWordmark size="60" style={{ fill: "white" }} />,
-    },
-    {
-      icon: <PostmanOriginal size="60" />,
     },
     {
       icon: (
@@ -63,7 +60,10 @@ const Skills = () => {
       ),
     },
     {
-      icon: <GitOriginal size="60" />,
+      icon: <VercelOriginalWordmark size="60" style={{ fill: "white" }} />,
+    }, 
+    {
+      icon: <PostmanOriginal size="60" />,
     },
   ];
 
@@ -72,7 +72,7 @@ const Skills = () => {
       {/* =============== Frameworks and Languages Start here =================== */}
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle
-          title="Tools & Frameworks"
+          title="Frameworks & Tools"
           icon={<FontAwesomeIcon icon={faToolbox} flip />}
         />
         {/* Frameworks Display */}
@@ -94,8 +94,8 @@ const Skills = () => {
 
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle
-          title="Other Experiences"
-          icon={<FontAwesomeIcon icon={faBookBookmark} flip />}
+          title="Extra skills"
+          icon={<FontAwesomeIcon icon={faCircleInfo} flip />}
         />
         <ul className="py-4 flex flex-col gap-2">
           {[
