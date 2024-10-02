@@ -99,7 +99,7 @@ const Skills = () => {
         />
         <ul className="py-4 flex flex-col gap-2">
           {[
-            "Services Deployments",
+            "Web Services Deployments",
             "API Development",
             "AI Training/Integration",
             "Service Desk Support",
