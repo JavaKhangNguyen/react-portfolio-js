@@ -1,6 +1,5 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import CV from "../../assets/CV_NPKhang.pdf";
 import { bannerImg } from "../../assets/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileArrowDown, faPaperPlane} from "@fortawesome/free-solid-svg-icons";
@@ -60,7 +59,7 @@ const Left = ({ handleContactClick }) => {
         </div>
         <div className="flex h-12 mt-[-20px]">
           <a
-            href={CV}
+            href="/CV_NPKhang.pdf"
             download="CV_NguyenPhucKhang.pdf"
             target="_blank"
             className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase  gap-2 hover:text-designColor duration-300"
