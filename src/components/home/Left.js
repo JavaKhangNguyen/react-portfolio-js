@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter"
-import { bannerImg } from "../../assets/index"
+import bannerImg from "../../assets/CV.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFileArrowDown, faPaperPlane} from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons' 

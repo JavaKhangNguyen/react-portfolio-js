@@ -1,12 +1,10 @@
 import React from "react";
-import {
-  workImgOne,
-  workImgTwo,
-  workImgThree,
-  workImgFour,
-  workImgFive,
-  workImgSix,
-} from "../../assets";
+import workImgOne from "../../assets/work/workImgOne.jpg"
+import workImgTwo from "../../assets/work/workImgTwo.jpg"
+import workImgThree from "../../assets/work/workImgThree.jpg"
+import workImgFour from "../../assets/work/workImgFour.jpg"
+import workImgFive from "../../assets/work/workImgFive.jpg"
+import workImgSix from "../../assets/work/workImgSix.jpg"
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
 
