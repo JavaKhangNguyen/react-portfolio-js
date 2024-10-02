@@ -31,7 +31,7 @@ const AboutMe = () => {
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">
               <FontAwesomeIcon icon={faLocationDot} className="-ml-2 mr-2" />Address</span>
-            Ho Chi Minh City, <Flag className="-ml-10" country="VN" />
+            Ho Chi Minh City, <Flag className="-ml-6" country="VN" />
           </li>
         </ul>
       </div>
