@@ -59,7 +59,7 @@ const Left = ({ handleContactClick }) => {
         </div>
         <div className="flex h-12 mt-[-20px]">
           <a
-            href="/CV_NPKhang.pdf"
+            href="/CV_NguyenPhucKhang.pdf"
             download="CV_NguyenPhucKhang.pdf"
             target="_blank"
             className="w-1/2 border-t-[1px] borderRight border-t-zinc-800 text-sm tracking-wide uppercase  gap-2 hover:text-designColor duration-300"
