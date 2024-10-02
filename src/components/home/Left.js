@@ -1,9 +1,10 @@
 import React from "react";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { bannerImg } from "../../assets/index";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown, faPaperPlane} from "@fortawesome/free-solid-svg-icons";
+import { useTypewriter, Cursor } from "react-simple-typewriter"
+import { bannerImg } from "../../assets/index"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFileArrowDown, faPaperPlane} from "@fortawesome/free-solid-svg-icons"
 import { faFacebookF, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons' 
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Left = ({ handleContactClick }) => {
   const [text] = useTypewriter({
@@ -16,10 +17,9 @@ const Left = ({ handleContactClick }) => {
   return (
     <div className="w-full lgl:w-5/12 h-full bg-bodyColor rounded-2xl shadow-testShwdow z-10">
       <div className="w-full h-3/5">
-        <img
+        <LazyLoadImage
           className="w-full h-full object-contain md:object-scale-down rounded-2xl"
           src={bannerImg}
-          loading="lazy"
           alt="bannerImage"
         />
       </div>
