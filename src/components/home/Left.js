@@ -17,7 +17,7 @@ const Left = ({ handleContactClick }) => {
     <div className="w-full lgl:w-5/12 h-full bg-bodyColor rounded-2xl shadow-testShwdow z-10">
       <div className="w-full h-3/5">
         <img
-          className="w-full h-full object-cover rounded-2xl"
+          className="w-full h-full object-contain md:object-scale-down rounded-2xl"
           src={bannerImg}
           loading="priority"
           alt="bannerImage"
