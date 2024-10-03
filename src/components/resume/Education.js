@@ -31,7 +31,7 @@ const Education = () => {
         <ResumeCard
           badge="06/2023 - Present"
           className="text-base text-designColor"
-          title="Freelancer"
+          title="Front-end developer"
           subTitle="AI4IA"
           logo={AI4IA}
           des=""

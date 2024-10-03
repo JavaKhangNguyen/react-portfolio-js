@@ -62,7 +62,7 @@ const Left = ({ handleContactClick }) => {
           </a>
           </div>
         </div>
-        <div className="flex h-12 mt-[-20px]">
+        <div className="flex h-14 mt-[-20px]">
           <a
             href="/CV_NguyenPhucKhang.pdf"
             download="CV_NguyenPhucKhang.pdf"
