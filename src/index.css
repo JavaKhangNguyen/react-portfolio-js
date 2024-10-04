@@ -35,4 +35,10 @@
   .icon-white {
     fill: white; 
   }
+  .loading-background {
+    @apply fixed inset-0 bg-bodyColor flex justify-center items-center z-50; /* Fullscreen background, centered content */
+  }
+  .loading-spinner {
+    @apply w-10 h-10 border-4 border-designColor border-t-transparent rounded-full animate-spin; /* Spinner styles */
+  }
 }
