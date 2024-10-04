@@ -1,13 +1,13 @@
 import React from "react";
 import ServicesCard from "./ServicesCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faTicket, faListCheck, faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faTicket, faListCheck, faRobot } from "@fortawesome/free-solid-svg-icons";
 
 const MyServices = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
       <ServicesCard
-        icons={<FontAwesomeIcon icon={faCode} beat/>}
+        icons={<FontAwesomeIcon icon={faLaptopCode} beat/>}
         title="Web Development"
         subTitle=""
       />

@@ -10,7 +10,7 @@ const AboutMe = () => {
         <div className="py-6">
           <h1 className="text-lg font-semibold mb-1">Hi! I'm <span className="font-bold">Nguyen Phuc Khang</span></h1>
           <p className="text-base leading-6 ">
-            I am a fresh graduate engineer from <span className="font-bold">International University</span>, 
+            I am a fresh IT graduate from <span className="font-bold">International University</span>, 
             and I created this portfolio to showcase my work and document my journey as I continue 
             to grow in the IT industry. 
           </p>
