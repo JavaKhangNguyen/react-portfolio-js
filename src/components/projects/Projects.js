@@ -27,8 +27,8 @@ const Projects = () => {
             link="https://plant-classification.streamlit.app/"
           />
           <ProjectsCard
-            title="Face Analysis"
-            category="An AI system to analyze facial landmarks"
+            title="Humanology Analysis"
+            category="An AI system to analyze humanology based on facial features"
             image={workImgFour}
             link="https://faceai-ui.myzens.net/"
           />
