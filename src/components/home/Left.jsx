@@ -45,10 +45,10 @@ const Left = ({ handleContactClick }) => {
               key={animateKey} // Force re-render when role changes
               option={{
                 loop: true,
-                minDisplayTime: 1000,
+                minDisplayTime: 1500,
                 in: { effect: "flipInX", sync: true },
                 out: { effect: "flipOutX", sync: true },
-                initialDelay: 30
+                initialDelay: 50
               }}
             >
               <span>{roles[currentRoleIndex]}</span>
