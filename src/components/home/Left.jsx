@@ -7,12 +7,14 @@ import { faFileArrowDown, faPaperPlane } from "@fortawesome/free-solid-svg-icons
 import { faFacebookF, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Left = ({ handleContactClick }) => {
-  const roles = ["Front-end Developer", "Back-end Developer","Full-stack Developer","Web Developer","IT Helpdesk",];
+  const roles = ["Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Developer", "IT Helpdesk"];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [animateKey, setAnimateKey] = useState(0); // Force re-render for Textillate when role changes
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+      setAnimateKey((prevKey) => prevKey + 1); // Force re-render by updating key
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(interval); // Clean up on unmount
@@ -38,21 +40,19 @@ const Left = ({ handleContactClick }) => {
             Nguyen Phuc Khang
           </h1>
           <p className="text-base font-medium text-designColor tracking-wide">
-            {/* Map over each role and render a Textillate component */}
-            {roles.map((role, index) => (
-              index === currentRoleIndex && (
-                <Textillate
-                  key={role}
-                  option={{
-                    in: { effect: "flipInX", sync: true },
-                    out: { effect: "flipOutX", sync: true },
-                    loop: true,
-                  }}
-                >
-                  {role}
-                </Textillate>
-              )
-            ))}
+            {/* Display only the current role */}
+            <Textillate
+              key={animateKey} // Force re-render when role changes
+              option={{
+                loop: true,
+                minDisplayTime: 1000,
+                in: { effect: "flipInX", sync: true },
+                out: { effect: "flipOutX", sync: true },
+                initialDelay: 30
+              }}
+            >
+              <span>{roles[currentRoleIndex]}</span>
+            </Textillate>
           </p>
           <div className="flex justify-center gap-2 mt-2">
             <a
