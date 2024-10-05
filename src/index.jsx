@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { setupIonicReact } from '@ionic/react';
+import { setupIonicReact } from "@ionic/react";
 import App from "./App";
 import "./index.css";
-import '@ionic/react/css/core.css';
-import FontFaceObserver from 'fontfaceobserver';
+import "@ionic/react/css/core.css";
+import FontFaceObserver from "fontfaceobserver";
 
 setupIonicReact();
 
@@ -16,20 +16,19 @@ const RootComponent = () => {
 
   useEffect(() => {
     // Create font observers for Montserrat and Poppins
-    const montserratObserver = new FontFaceObserver('Montserrat');
-    const poppinsObserver = new FontFaceObserver('Poppins');
+    const montserratObserver = new FontFaceObserver("Montserrat");
+    const poppinsObserver = new FontFaceObserver("Poppins");
 
     // Wait for both fonts to load
-    Promise.all([
-      montserratObserver.load(),
-      poppinsObserver.load(),
-    ]).then(() => {
-      // Hide loading screen once fonts are loaded
-      setIsLoading(false);
-    }).catch((err) => {
-      console.error('Font loading failed:', err);
-      setIsLoading(false); // Fail-safe to hide loader
-    });
+    Promise.all([montserratObserver.load(), poppinsObserver.load()])
+      .then(() => {
+        // Hide loading screen once fonts are loaded
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("Font loading failed:", err);
+        setIsLoading(false); // Fail-safe to hide loader
+      });
   }, []);
 
   return (
@@ -40,7 +39,7 @@ const RootComponent = () => {
           <div className="loading-spinner"></div>
         </div>
       )}
-      
+
       {/* Render the App and SpeedInsights once loading is finished */}
       {!isLoading && (
         <>
