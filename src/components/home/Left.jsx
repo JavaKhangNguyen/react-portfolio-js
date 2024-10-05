@@ -15,7 +15,7 @@ const Left = ({ handleContactClick }) => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
       setAnimateKey((prevKey) => prevKey + 1); // Force re-render by updating key
-    }, 3000); // Change every 3 seconds
+    }, 3500); // Change every 3 seconds
 
     return () => clearInterval(interval); // Clean up on unmount
   }, [roles.length]);
@@ -46,9 +46,9 @@ const Left = ({ handleContactClick }) => {
               option={{
                 loop: true,
                 minDisplayTime: 1500,
-                in: { effect: "flipInX", sync: true },
-                out: { effect: "flipOutX", sync: true },
-                initialDelay: 50
+                in: { effect: "fadeInUp", sync: true },
+                out: { effect: "fadeOutDown", sync: true },
+                initialDelay: 150
               }}
             >
               <span>{roles[currentRoleIndex]}</span>
