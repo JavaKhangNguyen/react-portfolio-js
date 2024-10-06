@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { Textillate } from "textillate-react";
+import TextTransition, { presets } from "react-text-transition";
 import bannerImgJpg from "../../assets/CV.jpg";
 import bannerImgWebp from "../../assets/CV.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {faFileArrowDown, faPaperPlane} from "@fortawesome/free-solid-svg-icons";
+import {faFacebookF, faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons";
 
 const Left = ({ handleContactClick }) => {
-  const roles = ["Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Developer", "IT Helpdesk"];
+  const roles = [
+    "Front-end Developer",
+    "Back-end Developer",
+    "Full-stack Developer",
+    "Web Developer",
+    "IT Helpdesk",
+  ];
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [animateKey, setAnimateKey] = useState(0); // Force re-render for Textillate when role changes
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-      setAnimateKey((prevKey) => prevKey + 1); // Force re-render by updating key
-    }, 3500);
+    const intervalId = setInterval(() => {
+      setCurrentRoleIndex((index) => (index + 1) % roles.length);
+    }, 3000); // Change role every 3 seconds
 
-    return () => clearInterval(interval); // Clean up on unmount
+    return () => clearInterval(intervalId); // Clean up interval on component unmount
   }, [roles.length]);
 
   return (
@@ -40,19 +44,10 @@ const Left = ({ handleContactClick }) => {
             Nguyen Phuc Khang
           </h1>
           <p className="text-base font-medium text-designColor tracking-wide">
-            {/* Display only the current role */}
-            <Textillate
-              key={animateKey} // Force re-render when role changes
-              option={{
-                loop: true,
-                minDisplayTime: 1500,
-                initialDelay: 200,
-                in: { effect: "fadeInUp", sync: true },
-                out: { effect: "fadeOutDown", sync: true }
-              }}
-            >
-              <span>{roles[currentRoleIndex]}</span>
-            </Textillate>
+            {/* Display the current role with animation */}
+            <TextTransition springConfig={presets.default}>
+              {roles[currentRoleIndex]}
+            </TextTransition>
           </p>
           <div className="flex justify-center gap-2 mt-2">
             <a
@@ -95,8 +90,7 @@ const Left = ({ handleContactClick }) => {
             </button>
           </a>
           <button
-            className="w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide
-            uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
+            className="w-1/2 border-t-[1px] border-t-zinc-800 text-sm tracking-wide uppercase flex justify-center items-center gap-2 hover:text-designColor duration-300"
             onClick={handleContactClick}
           >
             <span className="text-lg">Contact me</span>
