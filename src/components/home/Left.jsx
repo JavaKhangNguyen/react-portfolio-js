@@ -19,7 +19,7 @@ const Left = ({ handleContactClick }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentRoleIndex((index) => (index + 1) % roles.length);
-    }, 3000); // Change role every 3 seconds
+    }, 1500); // Change role every 2 seconds
 
     return () => clearInterval(intervalId); // Clean up interval on component unmount
   }, [roles.length]);
@@ -44,7 +44,7 @@ const Left = ({ handleContactClick }) => {
             Nguyen Phuc Khang
           </h1>
           <p className="text-base font-medium text-designColor tracking-wide">
-            {/* Display the current role with animation */}
+            {/* Display the roles with animation */}
             <TextTransition springConfig={presets.default}>
               {roles[currentRoleIndex]}
             </TextTransition>
