@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const ServicesCard = ({ icons, title, subTitle }) => {
   return (
     <div className="py-4 px-4 flex flex-col items-center gap-1.5 sm:gap-1.4 md:gap-1.6 lg:gap-2 borderRight borderBottom">
@@ -9,5 +9,11 @@ const ServicesCard = ({ icons, title, subTitle }) => {
     </div>
   );
 };
+
+ServicesCard.propTypes = {
+  icons: PropTypes.element,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+}
 
 export default ServicesCard;

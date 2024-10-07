@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const ResumeCard = ({ badge, title, subTitle, des, className, logo }) => {
   // Function to split the title and add line breaks
   const formatTitle = (title) => {
@@ -39,5 +39,14 @@ const ResumeCard = ({ badge, title, subTitle, des, className, logo }) => {
     </div>
   );
 };
+
+ResumeCard.propTypes = {
+  badge: PropTypes.string,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+  des: PropTypes.string,
+  className: PropTypes.string,
+  logo: PropTypes.string,
+}
 
 export default ResumeCard;
