@@ -3,8 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faToolbox, faCheck, faCircleInfo} from "@fortawesome/free-solid-svg-icons";
 import {faGithub, faNode} from "@fortawesome/free-brands-svg-icons";
 import {
+  GitOriginal,
   MaterialuiOriginal,
   MysqlOriginalWordmark,
+  NextjsPlain,
   NginxOriginal,
   PostmanOriginal,
   ReactOriginal,
@@ -12,6 +14,8 @@ import {
   FastapiOriginal,
   TailwindcssOriginal,
   VercelOriginalWordmark,
+  ViteOriginal,
+  VitestOriginal,
   VuejsOriginal,
 } from "devicons-react";
 
@@ -23,7 +27,13 @@ const Skills = () => {
       icon: <ReactOriginal size="60" />,
     },
     {
-      icon: <VuejsOriginal size="60" />,
+      icon: <ViteOriginal size="60" />,
+    },
+    {
+      icon: <VitestOriginal size="60" />,
+    },
+    {
+      icon: <NextjsPlain size="60" className="!fill-white"/>,
     },
     {
       icon: <TailwindcssOriginal size="60" />,
@@ -35,9 +45,6 @@ const Skills = () => {
       icon: <NginxOriginal size="60" />,
     },
     {
-      icon: <FastapiOriginal size="60" />,
-    },
-    {
       icon: (
         <FontAwesomeIcon
           icon={faNode}
@@ -46,10 +53,19 @@ const Skills = () => {
       ),
     },
     {
+      icon: <FastapiOriginal size="60" />,
+    },
+    {
       icon: <FlaskOriginalWordmark size="60" style={{ fill: "white" }} />,
     }, 
     {
       icon: <MysqlOriginalWordmark size="60" />,
+    },
+    {
+      icon: <VuejsOriginal size="60" />,
+    },
+    {
+      icon: <GitOriginal size="60" />,
     },
     {
       icon: (

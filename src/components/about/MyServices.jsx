@@ -13,7 +13,7 @@ const MyServices = () => {
       />
       <ServicesCard
         icons={<FontAwesomeIcon icon={faTicket} flip />}
-        title="Service Desk Engineering"
+        title="Helpdesk Support"
         subTitle=""
       />
       <ServicesCard
