@@ -7,6 +7,7 @@ import Flag from "react-flagkit";
 import {JavaOriginalWordmark, JavascriptOriginal, PythonOriginalWordmark, TypescriptOriginal} from "devicons-react";
 import IU from "../../assets/IU.png";
 import AI4IA from "../../assets/AI4IA.jpg";
+import SouthAnt from "../../assets/SouthAnt.png";
 
 const Education = () => {
   const proglang = [
@@ -42,6 +43,14 @@ const Education = () => {
           title="Teaching Assistant"
           subTitle="International University"
           logo={IU}
+          des=""
+        />
+        <ResumeCard
+          badge="09/2023 - 12/2023"
+          className="text-base"
+          title="Fullstack Developer - Intern"
+          subTitle="South Ant"
+          logo={SouthAnt}
           des=""
         />
         <ResumeCard

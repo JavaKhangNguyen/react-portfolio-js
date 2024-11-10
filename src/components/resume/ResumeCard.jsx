@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 const ResumeCard = ({ badge, title, subTitle, des, className, logo }) => {
-  // Function to split the title and add line breaks
   const formatTitle = (title) => {
     return title.split('/').map((part, index, array) => (
       <React.Fragment key={index}>
