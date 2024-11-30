@@ -8,22 +8,22 @@ import { faFacebookF, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-
 import Resizer from "react-image-file-resizer";
 
 const Left = ({ handleContactClick }) => {
-  const roles = ["Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Developer", "IT Helpdesk"];
+  const roles = ["Front-end Developer"];
+  // const roles = ["Back-end Developer", "Full-stack Developer", "Web Developer", "IT Helpdesk"]
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [animateKey, setAnimateKey] = useState(0); // Force re-render for Textillate when role changes
+  const [animateKey, setAnimateKey] = useState(0); 
   const [resizedImage, setResizedImage] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-      setAnimateKey((prevKey) => prevKey + 1); // Force re-render by updating key
-    }, 3500); // Change every 3 seconds
+      setAnimateKey((prevKey) => prevKey + 1); 
+    }, 3500); 
 
-    return () => clearInterval(interval); // Clean up on unmount
+    return () => clearInterval(interval); 
   }, [roles.length]);
 
   useEffect(() => {
-    // Function to resize the image
     const resizeImage = (imgSrc, format = "WEBP", quality = 90, maxWidth = 600, maxHeight = 600) => {
       Resizer.imageFileResizer(
         imgSrc,
@@ -35,11 +35,10 @@ const Left = ({ handleContactClick }) => {
         (uri) => {
           setResizedImage(uri);
         },
-        "base64" // Output type
+        "base64" 
       );
     };
 
-    // Convert the imported image to blob or base64 and resize it
     fetch(bannerImgJpg)
       .then((response) => response.blob())
       .then((blob) => {
@@ -64,7 +63,7 @@ const Left = ({ handleContactClick }) => {
           ) : (
             <img
               className="w-full h-full object-cover md:object-scale-down rounded-2xl"
-              src={bannerImgJpg} // Fallback for browsers that don't support <picture>
+              src={bannerImgJpg} 
               alt="bannerImage"
               loading="priority"
             />
@@ -79,7 +78,7 @@ const Left = ({ handleContactClick }) => {
           <p className="text-base font-medium text-designColor tracking-wide">
             {/* Display only the current role */}
             <Textillate
-              key={animateKey} // Force re-render when role changes
+              key={animateKey} 
               option={{
                 loop: true,
                 minDisplayTime: 1500,
