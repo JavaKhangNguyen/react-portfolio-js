@@ -26,7 +26,7 @@ const AboutMe = () => {
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">
               <FontAwesomeIcon icon={faBriefcase} className="-ml-2 mr-2" />Employment</span>
-            Available
+            DigiEx Group
           </li>
           <li className="aboutRightLi">
             <span className="aboutRightLiSpan">

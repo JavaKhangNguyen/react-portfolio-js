@@ -7,6 +7,7 @@ import Flag from "react-flagkit";
 import {JavaOriginalWordmark, JavascriptOriginal, PythonOriginalWordmark, TypescriptOriginal} from "devicons-react";
 import IU from "../../assets/IU.png";
 import AI4IA from "../../assets/AI4IA.jpg";
+import DigiEx from "../../assets/DigiEx.jpg";
 import SouthAnt from "../../assets/SouthAnt.png";
 
 const Education = () => {
@@ -30,9 +31,17 @@ const Education = () => {
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle title="Experience" icon={<FontAwesomeIcon icon={faBriefcase} flip/>} />
         <ResumeCard
-          badge="06/2023 - Present"
+          badge="12/2024 - Present"
           className="text-base text-designColor"
           title="Front-end developer"
+          subTitle="DigiEx Group"
+          logo={DigiEx}
+          des=""
+        />
+        <ResumeCard
+          badge="06/2023 - Present"
+          className="text-base text-designColor"
+          title="Front-end developer (Part-time)"
           subTitle="AI4IA"
           logo={AI4IA}
           des=""
@@ -54,8 +63,8 @@ const Education = () => {
           des=""
         />
         <ResumeCard
-          badge="03/2021 - Present"
-          className="text-base text-designColor"
+          badge="03/2021 - 11/2024"
+          className="text-base"
           title="IT Helpdesk"
           subTitle="International University"
           logo={IU}
