@@ -5,6 +5,7 @@ import workImgThree from "../../assets/work/workImgThree.jpg"
 import workImgFour from "../../assets/work/workImgFour.jpg"
 import workImgFive from "../../assets/work/workImgFive.jpg"
 import workImgSix from "../../assets/work/workImgSix.jpg"
+import workImgSeven from "../../assets/work/workImgSeven.jpg"
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
 
@@ -34,7 +35,13 @@ const Projects = () => {
           />
         </div>
         <div className="px-6">
-        <ProjectsCard
+          <ProjectsCard
+              title="IU Youth Union Plugin"
+              category="A ReactJS-based plugin for IU Youth Union in activities confirmation lookup & automatic certifications" 
+              image={workImgSeven}
+              link="https://iuyouth.edu.vn/tra-cuu-hoat-dong/"
+          />
+          <ProjectsCard
             title="BME10"
             category="A ReactJS-based web application for the BME10 International conference hosted on July 2024" 
             image={workImgOne}
