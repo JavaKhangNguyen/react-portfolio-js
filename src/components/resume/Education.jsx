@@ -33,7 +33,7 @@ const Education = () => {
         <ResumeCard
           badge="12/2024 - Present"
           className="text-base text-designColor"
-          title="Front-end developer"
+          title="Front-end Developer - Intern"
           subTitle="DigiEx Group"
           logo={DigiEx}
           des=""
@@ -41,7 +41,7 @@ const Education = () => {
         <ResumeCard
           badge="06/2023 - Present"
           className="text-base text-designColor"
-          title="Front-end developer (Part-time)"
+          title="Front-end Developer (Part-time)"
           subTitle="AI4IA"
           logo={AI4IA}
           des=""
