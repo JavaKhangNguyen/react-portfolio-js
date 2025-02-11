@@ -5,10 +5,9 @@ import { faBriefcase, faGraduationCap, faLanguage, faCode } from "@fortawesome/f
 import ResumeCard from "./ResumeCard";
 import Flag from "react-flagkit";
 import {JavaOriginalWordmark, JavascriptOriginal, PythonOriginalWordmark, TypescriptOriginal} from "devicons-react";
-import IU from "../../assets/IU.png";
-import AI4IA from "../../assets/AI4IA.jpg";
-import DigiEx from "../../assets/DigiEx.jpg";
-import SouthAnt from "../../assets/SouthAnt.png";
+import IU from "../../assets/IU.webp";
+import AI4IA from "../../assets/AI4IA.webp";
+import DigiEx from "../../assets/DigiEx.webp";
 
 const Education = () => {
   const proglang = [
@@ -38,28 +37,20 @@ const Education = () => {
           logo={DigiEx}
           des=""
         />
-        <ResumeCard
+        {/* <ResumeCard
           badge="06/2023 - Present"
           className="text-base text-designColor"
           title="Front-end Developer (Part-time)"
           subTitle="AI4IA"
           logo={AI4IA}
           des=""
-        />
+        /> */}
         <ResumeCard
           badge="09/2023 - 07/2024"
           className="text-base"
           title="Teaching Assistant"
           subTitle="International University"
           logo={IU}
-          des=""
-        />
-        <ResumeCard
-          badge="09/2023 - 12/2023"
-          className="text-base"
-          title="Fullstack Developer - Intern"
-          subTitle="South Ant"
-          logo={SouthAnt}
           des=""
         />
         <ResumeCard
