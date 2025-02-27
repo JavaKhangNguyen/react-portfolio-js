@@ -9,7 +9,7 @@ import Resizer from "react-image-file-resizer";
 
 const Left = ({ handleContactClick }) => {
   const roles = ["Front-end Developer"];
-  // const roles = ["Back-end Developer", "Full-stack Developer", "Web Developer", "IT Helpdesk"]
+  // const roles = [, "Front-end Developer", "Back-end Developer", "Full-stack Developer", "Web Developer"]
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [animateKey, setAnimateKey] = useState(0); 
   const [resizedImage, setResizedImage] = useState(null);
@@ -18,7 +18,7 @@ const Left = ({ handleContactClick }) => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
       setAnimateKey((prevKey) => prevKey + 1); 
-    }, 3500); 
+    }, 3000); 
 
     return () => clearInterval(interval); 
   }, [roles.length]);

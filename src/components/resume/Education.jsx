@@ -29,20 +29,20 @@ const Education = () => {
     <div className="w-full grid grid-cols-9 px-6">
       <div className="col-span-9 md:col-span-4">
         <ResumeTitle title="Experience" icon={<FontAwesomeIcon icon={faBriefcase} flip/>} />
-        {/* <ResumeCard
-          badge="12/2024 - Present"
-          className="text-base text-designColor"
-          title="Front-end Developer - Intern"
-          subTitle="DigiEx Group"
-          logo={DigiEx}
-          des=""
-        /> */}
         <ResumeCard
           badge="06/2023 - Present"
           className="text-base text-designColor"
           title="Front-end Developer (Part-time)"
           subTitle="AI4IA"
           logo={AI4IA}
+          des=""
+        />
+        <ResumeCard
+          badge="12/2024 - 02/2025"
+          className="text-base"
+          title="Front-end Developer - Intern"
+          subTitle="DigiEx Group"
+          logo={DigiEx}
           des=""
         />
         <ResumeCard
